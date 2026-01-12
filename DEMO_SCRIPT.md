@@ -1,7 +1,7 @@
 # My 2-Minute Demo Script 🎤
 
 ## Introduction (15 seconds)
-"Hi, I'm [Your Name]. I built a Python code analyzer that helps developers quickly understand code structure - like having X-ray vision for Python files."
+"Hi, I'm Harishlal. My tool analyzes Python files using AST parsing to extract and display all functions, classes, and imports along with their line numbers. It also generates JSON and text summary reports for quick understanding of code structure. I used Claude AI as an assistant for guidance and improvement during development."
 
 ---
 
@@ -15,7 +15,7 @@
 ### 1. Show the Input File (10 sec)
 **Say:** "Here's a Python file with multiple classes, functions, and imports."
 
-**Do:** Point to `complex_example.py` on the left side of screen
+**Do:** Point to `largecode.py` on the left side of screen
 
 ---
 
@@ -23,4 +23,7 @@
 **Say:** "Let me analyze this file..."
 
 **Type in terminal:**
-```bash
+python analyzer.py examples/largecode.py
+
+## 3.Save the json file and summary txt file 
+** file gets saved **
