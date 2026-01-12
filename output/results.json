@@ -1,78 +1,149 @@
 {
-  "file": "sample.py",
+  "file": "complex_example.py",
   "functions": [
     {
-      "name": "calculate_total",
-      "line_number": 23,
+      "name": "validate_order_data",
+      "line_number": 68,
       "arguments": [
-        "numbers"
+        "data"
       ],
       "has_docstring": true
     },
     {
-      "name": "main",
-      "line_number": 30,
-      "arguments": [],
+      "name": "export_orders_to_json",
+      "line_number": 74,
+      "arguments": [
+        "orders",
+        "filename"
+      ],
       "has_docstring": true
     },
     {
       "name": "__init__",
-      "line_number": 7,
+      "line_number": 14,
+      "arguments": [
+        "self",
+        "order_id",
+        "customer_id"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "add_item",
+      "line_number": 20,
+      "arguments": [
+        "self",
+        "item_id",
+        "quantity",
+        "price"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "calculate_total",
+      "line_number": 29,
+      "arguments": [
+        "self"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "to_dict",
+      "line_number": 34,
+      "arguments": [
+        "self"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "__init__",
+      "line_number": 48,
       "arguments": [
         "self"
       ],
       "has_docstring": false
     },
     {
-      "name": "load_data",
-      "line_number": 10,
+      "name": "create_order",
+      "line_number": 51,
       "arguments": [
         "self",
-        "filename"
+        "customer_id"
       ],
       "has_docstring": true
     },
     {
-      "name": "process_data",
-      "line_number": 16,
+      "name": "get_order",
+      "line_number": 58,
       "arguments": [
-        "self"
+        "self",
+        "order_id"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "get_customer_orders",
+      "line_number": 62,
+      "arguments": [
+        "self",
+        "customer_id"
       ],
       "has_docstring": true
     }
   ],
   "classes": [
     {
-      "name": "DataProcessor",
-      "line_number": 6,
+      "name": "Order",
+      "line_number": 11,
       "methods": [
         "__init__",
-        "load_data",
-        "process_data"
+        "add_item",
+        "calculate_total",
+        "to_dict"
+      ]
+    },
+    {
+      "name": "OrderManager",
+      "line_number": 45,
+      "methods": [
+        "__init__",
+        "create_order",
+        "get_order",
+        "get_customer_orders"
       ]
     }
   ],
   "imports": [
     {
-      "module": "os",
+      "module": "json",
       "alias": null,
-      "line": 2
+      "line": 4
     },
     {
-      "module": "sys",
+      "module": "logging",
       "alias": null,
-      "line": 3
+      "line": 5
     },
     {
       "module": "datetime.datetime",
       "alias": null,
-      "line": 4
+      "line": 6
+    },
+    {
+      "module": "typing.List",
+      "alias": null,
+      "line": 7
+    },
+    {
+      "module": "typing.Dict",
+      "alias": null,
+      "line": 7
     }
   ],
   "metrics": {
-    "total_lines": 36,
-    "total_functions": 5,
-    "total_classes": 1,
-    "total_imports": 3
+    "total_lines": 77,
+    "total_functions": 10,
+    "total_classes": 2,
+    "total_imports": 5
   }
 }

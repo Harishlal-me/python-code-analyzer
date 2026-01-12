@@ -136,25 +136,59 @@ class CodeAnalyzer:
             json.dump(self.results, f, indent=2)
         print(f"✅ Results saved to: {output_file}")
 
-
+def compare_files(file1, file2):
+    """Compare two Python files"""
+    print("\n" + "="*50)
+    print("COMPARING TWO FILES")
+    print("="*50 + "\n")
+    
+    analyzer1 = CodeAnalyzer(file1)
+    analyzer2 = CodeAnalyzer(file2)
+    
+    results1 = analyzer1.analyze()
+    results2 = analyzer2.analyze()
+    
+    if not results1 or not results2:
+        print("❌ Could not compare files")
+        return
+    
+    print(f"File 1: {file1}")
+    print(f"  Functions: {results1['metrics']['total_functions']}")
+    print(f"  Classes: {results1['metrics']['total_classes']}")
+    print(f"  Lines: {results1['metrics']['total_lines']}")
+    
+    print(f"\nFile 2: {file2}")
+    print(f"  Functions: {results2['metrics']['total_functions']}")
+    print(f"  Classes: {results2['metrics']['total_classes']}")
+    print(f"  Lines: {results2['metrics']['total_lines']}")
+    
+    print("\n" + "="*50 + "\n")
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python analyzer.py <path_to_python_file>")
-        print("Example: python analyzer.py examples/sample.py")
+        print("Usage:")
+        print("  Analyze one file: python analyzer.py <path_to_python_file>")
+        print("  Compare two files: python analyzer.py <file1> <file2>")
+        print("\nExamples:")
+        print("  python analyzer.py examples/sample.py")
+        print("  python analyzer.py examples/sample.py examples/complex_example.py")
         sys.exit(1)
     
-    filepath = sys.argv[1]
-    
-    print(f"\n🔍 Analyzing: {filepath}\n")
-    
-    analyzer = CodeAnalyzer(filepath)
-    results = analyzer.analyze()
-    
-    if results:
-        analyzer.print_results()
-        analyzer.save_json()
+    if len(sys.argv) == 3:
+        # Compare mode
+        compare_files(sys.argv[1], sys.argv[2])
     else:
-        print("❌ Analysis failed")
+        # Single file analysis
+        filepath = sys.argv[1]
+        print(f"\n🔍 Analyzing: {filepath}\n")
+        
+        analyzer = CodeAnalyzer(filepath)
+        results = analyzer.analyze()
+        
+        if results:
+            analyzer.print_results()
+            analyzer.save_json()
+        else:
+            print("❌ Analysis failed")
 
 
 if __name__ == "__main__":
