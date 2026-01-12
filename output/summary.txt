@@ -1,30 +1,18 @@
 ============================================================
-CODE ANALYSIS SUMMARY: example.py
+CODE ANALYSIS SUMMARY: test_modules.py
 ============================================================
 
 📋 OVERVIEW:
-   Total Lines: 36
-   Functions: 5
-   Classes: 1
-   Imports: 3
+   Total Lines: 48
+   Functions: 2
+   Classes: 0
+   Imports: 2
 
 🔧 FUNCTION DETAILS:
-   • calculate_total() at line 23
-     Parameters: numbers
-   • main() at line 30
-   • __init__() at line 7
-     Parameters: self
-   • load_data() at line 10
-     Parameters: self, filename
-   • process_data() at line 16
-     Parameters: self
-
-🏛️ CLASS DETAILS:
-   • DataProcessor at line 6
-     Methods: 3 - __init__, load_data, process_data
+   • manage_environment() at line 4
+   • handle_arguments() at line 24
 
 📦 DEPENDENCIES:
-   • datetime
    • os
    • sys
 
