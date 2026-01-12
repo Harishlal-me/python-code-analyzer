@@ -1,7 +1,21 @@
 import ast
 import json
 import sys
+import os
 
+def validate_file(filepath):
+    """Validate that file exists and is a Python file"""
+    if not os.path.exists(filepath):
+        print(f"❌ Error: File '{filepath}' does not exist")
+        return False
+    
+    if not filepath.endswith('.py'):
+        print(f"⚠️  Warning: '{filepath}' may not be a Python file")
+        response = input("Continue anyway? (y/n): ")
+        if response.lower() != 'y':
+            return False
+    
+    return True
 class CodeAnalyzer:
     def __init__(self, filepath):
         self.filepath = filepath
@@ -216,7 +230,6 @@ def compare_files(file1, file2):
     
     print("\n" + "="*50 + "\n")
     
-
 def main():
     if len(sys.argv) < 2:
         print("Usage:")
@@ -229,10 +242,15 @@ def main():
     
     if len(sys.argv) == 3:
         # Compare mode
-        compare_files(sys.argv[1], sys.argv[2])
+        if validate_file(sys.argv[1]) and validate_file(sys.argv[2]):
+            compare_files(sys.argv[1], sys.argv[2])
     else:
         # Single file analysis
         filepath = sys.argv[1]
+        
+        if not validate_file(filepath):
+            sys.exit(1)
+        
         print(f"\n🔍 Analyzing: {filepath}\n")
         
         analyzer = CodeAnalyzer(filepath)
