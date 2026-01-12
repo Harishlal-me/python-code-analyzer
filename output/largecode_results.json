@@ -1,0 +1,497 @@
+{
+  "file": "examples/largecode.py",
+  "functions": [
+    {
+      "name": "greet",
+      "line_number": 21,
+      "arguments": [
+        "name"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "safe_divide",
+      "line_number": 26,
+      "arguments": [
+        "a",
+        "b"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "get_env_variable",
+      "line_number": 34,
+      "arguments": [
+        "key",
+        "default"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "factorial",
+      "line_number": 39,
+      "arguments": [
+        "n"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "fibonacci",
+      "line_number": 49,
+      "arguments": [
+        "n"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "calculate_statistics",
+      "line_number": 59,
+      "arguments": [
+        "numbers"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "pretty_print",
+      "line_number": 71,
+      "arguments": [
+        "data"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "logger",
+      "line_number": 80,
+      "arguments": [
+        "func"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "time_it",
+      "line_number": 88,
+      "arguments": [
+        "func"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "generate_random_data",
+      "line_number": 250,
+      "arguments": [
+        "size"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "group_numbers",
+      "line_number": 255,
+      "arguments": [
+        "numbers"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "analyze_text",
+      "line_number": 263,
+      "arguments": [
+        "text"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "nested_function_example",
+      "line_number": 274,
+      "arguments": [
+        "x"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "main",
+      "line_number": 285,
+      "arguments": [],
+      "has_docstring": true
+    },
+    {
+      "name": "wrapper",
+      "line_number": 82,
+      "arguments": [],
+      "has_docstring": false
+    },
+    {
+      "name": "wrapper",
+      "line_number": 90,
+      "arguments": [],
+      "has_docstring": false
+    },
+    {
+      "name": "__init__",
+      "line_number": 106,
+      "arguments": [
+        "self",
+        "name",
+        "age"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "is_adult",
+      "line_number": 110,
+      "arguments": [
+        "self"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "birthday",
+      "line_number": 114,
+      "arguments": [
+        "self"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "__init__",
+      "line_number": 122,
+      "arguments": [
+        "self",
+        "name",
+        "age",
+        "roll_no"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "add_mark",
+      "line_number": 127,
+      "arguments": [
+        "self",
+        "subject",
+        "mark"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "average",
+      "line_number": 131,
+      "arguments": [
+        "self"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "top_subject",
+      "line_number": 137,
+      "arguments": [
+        "self"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "add",
+      "line_number": 148,
+      "arguments": [
+        "a",
+        "b"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "sub",
+      "line_number": 152,
+      "arguments": [
+        "a",
+        "b"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "mul",
+      "line_number": 156,
+      "arguments": [
+        "a",
+        "b"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "power",
+      "line_number": 160,
+      "arguments": [
+        "a",
+        "b"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "__init__",
+      "line_number": 167,
+      "arguments": [
+        "self"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "set_value",
+      "line_number": 170,
+      "arguments": [
+        "self",
+        "key",
+        "value"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "get_value",
+      "line_number": 173,
+      "arguments": [
+        "self",
+        "key",
+        "default"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "remove_value",
+      "line_number": 176,
+      "arguments": [
+        "self",
+        "key"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "keys",
+      "line_number": 180,
+      "arguments": [
+        "self"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "__init__",
+      "line_number": 191,
+      "arguments": [
+        "self",
+        "base_path"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "build_path",
+      "line_number": 194,
+      "arguments": [
+        "self",
+        "filename"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "save_text",
+      "line_number": 197,
+      "arguments": [
+        "self",
+        "filename",
+        "content"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "read_text",
+      "line_number": 202,
+      "arguments": [
+        "self",
+        "filename"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "__init__",
+      "line_number": 211,
+      "arguments": [
+        "self"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "add_task",
+      "line_number": 215,
+      "arguments": [
+        "self",
+        "title",
+        "priority"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "complete_task",
+      "line_number": 224,
+      "arguments": [
+        "self",
+        "task_id"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "get_pending_tasks",
+      "line_number": 228,
+      "arguments": [
+        "self"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "sort_by_priority",
+      "line_number": 231,
+      "arguments": [
+        "self"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "inner",
+      "line_number": 276,
+      "arguments": [
+        "y"
+      ],
+      "has_docstring": false
+    }
+  ],
+  "classes": [
+    {
+      "name": "Person",
+      "line_number": 103,
+      "methods": [
+        "__init__",
+        "is_adult",
+        "birthday"
+      ]
+    },
+    {
+      "name": "Student",
+      "line_number": 119,
+      "methods": [
+        "__init__",
+        "add_mark",
+        "average",
+        "top_subject"
+      ]
+    },
+    {
+      "name": "Calculator",
+      "line_number": 144,
+      "methods": [
+        "add",
+        "sub",
+        "mul",
+        "power"
+      ]
+    },
+    {
+      "name": "DataStore",
+      "line_number": 164,
+      "methods": [
+        "__init__",
+        "set_value",
+        "get_value",
+        "remove_value",
+        "keys"
+      ]
+    },
+    {
+      "name": "FileManager",
+      "line_number": 188,
+      "methods": [
+        "__init__",
+        "build_path",
+        "save_text",
+        "read_text"
+      ]
+    },
+    {
+      "name": "TaskManager",
+      "line_number": 208,
+      "methods": [
+        "__init__",
+        "add_task",
+        "complete_task",
+        "get_pending_tasks",
+        "sort_by_priority"
+      ]
+    }
+  ],
+  "imports": [
+    {
+      "module": "os",
+      "alias": null,
+      "line": 7
+    },
+    {
+      "module": "sys",
+      "alias": null,
+      "line": 8
+    },
+    {
+      "module": "json",
+      "alias": null,
+      "line": 9
+    },
+    {
+      "module": "math",
+      "alias": null,
+      "line": 10
+    },
+    {
+      "module": "random",
+      "alias": null,
+      "line": 11
+    },
+    {
+      "module": "datetime",
+      "alias": null,
+      "line": 12
+    },
+    {
+      "module": "collections.defaultdict",
+      "alias": null,
+      "line": 13
+    },
+    {
+      "module": "collections.Counter",
+      "alias": null,
+      "line": 13
+    },
+    {
+      "module": "typing.List",
+      "alias": null,
+      "line": 14
+    },
+    {
+      "module": "typing.Dict",
+      "alias": null,
+      "line": 14
+    },
+    {
+      "module": "typing.Any",
+      "alias": null,
+      "line": 14
+    },
+    {
+      "module": "typing.Optional",
+      "alias": null,
+      "line": 14
+    },
+    {
+      "module": "typing.Tuple",
+      "alias": null,
+      "line": 14
+    }
+  ],
+  "metrics": {
+    "total_lines": 328,
+    "total_functions": 42,
+    "total_classes": 6,
+    "total_imports": 13
+  }
+}

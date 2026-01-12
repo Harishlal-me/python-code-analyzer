@@ -1,0 +1,118 @@
+============================================================
+CODE ANALYSIS SUMMARY: examples/largecode.py
+============================================================
+
+📋 OVERVIEW:
+   Total Lines: 328
+   Functions: 42
+   Classes: 6
+   Imports: 13
+
+🔧 FUNCTION DETAILS:
+   • greet() at line 21
+     Parameters: name
+   • safe_divide() at line 26
+     Parameters: a, b
+   • get_env_variable() at line 34
+     Parameters: key, default
+   • factorial() at line 39
+     Parameters: n
+   • fibonacci() at line 49
+     Parameters: n
+   • calculate_statistics() at line 59
+     Parameters: numbers
+   • pretty_print() at line 71
+     Parameters: data
+   • logger() at line 80
+     Parameters: func
+   • time_it() at line 88
+     Parameters: func
+   • generate_random_data() at line 250
+     Parameters: size
+   • group_numbers() at line 255
+     Parameters: numbers
+   • analyze_text() at line 263
+     Parameters: text
+   • nested_function_example() at line 274
+     Parameters: x
+   • main() at line 285
+   • wrapper() at line 82
+   • wrapper() at line 90
+   • __init__() at line 106
+     Parameters: self, name, age
+   • is_adult() at line 110
+     Parameters: self
+   • birthday() at line 114
+     Parameters: self
+   • __init__() at line 122
+     Parameters: self, name, age, roll_no
+   • add_mark() at line 127
+     Parameters: self, subject, mark
+   • average() at line 131
+     Parameters: self
+   • top_subject() at line 137
+     Parameters: self
+   • add() at line 148
+     Parameters: a, b
+   • sub() at line 152
+     Parameters: a, b
+   • mul() at line 156
+     Parameters: a, b
+   • power() at line 160
+     Parameters: a, b
+   • __init__() at line 167
+     Parameters: self
+   • set_value() at line 170
+     Parameters: self, key, value
+   • get_value() at line 173
+     Parameters: self, key, default
+   • remove_value() at line 176
+     Parameters: self, key
+   • keys() at line 180
+     Parameters: self
+   • __init__() at line 191
+     Parameters: self, base_path
+   • build_path() at line 194
+     Parameters: self, filename
+   • save_text() at line 197
+     Parameters: self, filename, content
+   • read_text() at line 202
+     Parameters: self, filename
+   • __init__() at line 211
+     Parameters: self
+   • add_task() at line 215
+     Parameters: self, title, priority
+   • complete_task() at line 224
+     Parameters: self, task_id
+   • get_pending_tasks() at line 228
+     Parameters: self
+   • sort_by_priority() at line 231
+     Parameters: self
+   • inner() at line 276
+     Parameters: y
+
+🏛️ CLASS DETAILS:
+   • Person at line 103
+     Methods: 3 - __init__, is_adult, birthday
+   • Student at line 119
+     Methods: 4 - __init__, add_mark, average, top_subject
+   • Calculator at line 144
+     Methods: 4 - add, sub, mul, power
+   • DataStore at line 164
+     Methods: 5 - __init__, set_value, get_value, remove_value, keys
+   • FileManager at line 188
+     Methods: 4 - __init__, build_path, save_text, read_text
+   • TaskManager at line 208
+     Methods: 5 - __init__, add_task, complete_task, get_pending_tasks, sort_by_priority
+
+📦 DEPENDENCIES:
+   • collections
+   • datetime
+   • json
+   • math
+   • os
+   • random
+   • sys
+   • typing
+
+============================================================

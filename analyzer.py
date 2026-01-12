@@ -1,4 +1,5 @@
 import ast
+from email.mime import base
 import json
 import sys
 import os
@@ -144,11 +145,16 @@ class CodeAnalyzer:
         
         print("\n" + "="*50 + "\n")
     
-    def save_json(self, output_file='output/results.json'):
-        """Save results to JSON file"""
+    def save_json(self):
+        """Save results to JSON file (unique filename)"""
+        base = os.path.splitext(os.path.basename(self.filepath))[0]
+        output_file = f"output/{base}_results.json"
+
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(self.results, f, indent=2, ensure_ascii=False)
+
         print(f"✅ Results saved to: {output_file}")
+
         
     def generate_summary(self):
         """Generate a text summary report"""
@@ -195,11 +201,15 @@ class CodeAnalyzer:
         
         return '\n'.join(summary)
     
-    def save_summary(self, output_file='output/summary.txt'):
-        """Save summary to text file"""
+    def save_summary(self):
+        """Save summary to text file (unique filename)"""
+        base = os.path.splitext(os.path.basename(self.filepath))[0]
+        output_file = f"output/{base}_summary.txt"
+
         summary = self.generate_summary()
         with open(output_file, 'w', encoding='utf-8') as f:
             f.write(summary)
+
         print(f"✅ Summary saved to: {output_file}")
 
 def compare_files(file1, file2):

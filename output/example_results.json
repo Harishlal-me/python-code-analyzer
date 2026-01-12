@@ -1,0 +1,78 @@
+{
+  "file": "examples/example.py",
+  "functions": [
+    {
+      "name": "calculate_total",
+      "line_number": 23,
+      "arguments": [
+        "numbers"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "main",
+      "line_number": 30,
+      "arguments": [],
+      "has_docstring": true
+    },
+    {
+      "name": "__init__",
+      "line_number": 7,
+      "arguments": [
+        "self"
+      ],
+      "has_docstring": false
+    },
+    {
+      "name": "load_data",
+      "line_number": 10,
+      "arguments": [
+        "self",
+        "filename"
+      ],
+      "has_docstring": true
+    },
+    {
+      "name": "process_data",
+      "line_number": 16,
+      "arguments": [
+        "self"
+      ],
+      "has_docstring": true
+    }
+  ],
+  "classes": [
+    {
+      "name": "DataProcessor",
+      "line_number": 6,
+      "methods": [
+        "__init__",
+        "load_data",
+        "process_data"
+      ]
+    }
+  ],
+  "imports": [
+    {
+      "module": "os",
+      "alias": null,
+      "line": 2
+    },
+    {
+      "module": "sys",
+      "alias": null,
+      "line": 3
+    },
+    {
+      "module": "datetime.datetime",
+      "alias": null,
+      "line": 4
+    }
+  ],
+  "metrics": {
+    "total_lines": 36,
+    "total_functions": 5,
+    "total_classes": 1,
+    "total_imports": 3
+  }
+}
