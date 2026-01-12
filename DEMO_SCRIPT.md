@@ -27,3 +27,23 @@ python analyzer.py examples/largecode.py
 
 ## 3.Save the json file and summary txt file 
 ** file gets saved **
+
+
+(or)
+
+Introduction (15s)
+“Hi, I’m Harishlal. I built a Python code analyzer that uses AST parsing to extract all functions, classes and imports with line numbers. It also generates JSON and text summary reports, so you can quickly understand file structure. I used Claude AI as an assistant for guidance during development.”
+
+Problem (20s)
+“When working with large codebases, it's hard and time-consuming to manually understand what’s inside a file—functions, classes, and dependencies. My tool solves this by extracting and organizing everything automatically in seconds.”
+
+Live Demo (60s)
+
+“Here’s a Python file with multiple classes, functions and imports.” (show largecode.py)
+
+“Now I’ll analyze it.” (run command)
+
+python analyzer.py examples/largecode.py
+
+
+“As you can see, it prints the extracted structure here, and it also saves two output files: a JSON report and a summary TXT file.” (show saved files/output folder)
