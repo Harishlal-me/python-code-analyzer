@@ -132,9 +132,61 @@ class CodeAnalyzer:
     
     def save_json(self, output_file='output/results.json'):
         """Save results to JSON file"""
-        with open(output_file, 'w') as f:
-            json.dump(self.results, f, indent=2)
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(self.results, f, indent=2, ensure_ascii=False)
         print(f"✅ Results saved to: {output_file}")
+        
+    def generate_summary(self):
+        """Generate a text summary report"""
+        summary = []
+        summary.append("="*60)
+        summary.append(f"CODE ANALYSIS SUMMARY: {self.filepath}")
+        summary.append("="*60)
+        summary.append("")
+        
+        # Overview
+        summary.append("📋 OVERVIEW:")
+        summary.append(f"   Total Lines: {self.results['metrics']['total_lines']}")
+        summary.append(f"   Functions: {self.results['metrics']['total_functions']}")
+        summary.append(f"   Classes: {self.results['metrics']['total_classes']}")
+        summary.append(f"   Imports: {self.results['metrics']['total_imports']}")
+        summary.append("")
+        
+        # Function details
+        if self.results['functions']:
+            summary.append("🔧 FUNCTION DETAILS:")
+            for func in self.results['functions']:
+                summary.append(f"   • {func['name']}() at line {func['line_number']}")
+                if func['arguments']:
+                    summary.append(f"     Parameters: {', '.join(func['arguments'])}")
+            summary.append("")
+        
+        # Class details
+        if self.results['classes']:
+            summary.append("🏛️ CLASS DETAILS:")
+            for cls in self.results['classes']:
+                summary.append(f"   • {cls['name']} at line {cls['line_number']}")
+                summary.append(f"     Methods: {len(cls['methods'])} - {', '.join(cls['methods'])}")
+            summary.append("")
+        
+        # Dependencies
+        if self.results['imports']:
+            summary.append("📦 DEPENDENCIES:")
+            unique_modules = set(imp['module'].split('.')[0] for imp in self.results['imports'])
+            for module in sorted(unique_modules):
+                summary.append(f"   • {module}")
+            summary.append("")
+        
+        summary.append("="*60)
+        
+        return '\n'.join(summary)
+    
+    def save_summary(self, output_file='output/summary.txt'):
+        """Save summary to text file"""
+        summary = self.generate_summary()
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(summary)
+        print(f"✅ Summary saved to: {output_file}")
 
 def compare_files(file1, file2):
     """Compare two Python files"""
@@ -163,6 +215,8 @@ def compare_files(file1, file2):
     print(f"  Lines: {results2['metrics']['total_lines']}")
     
     print("\n" + "="*50 + "\n")
+    
+
 def main():
     if len(sys.argv) < 2:
         print("Usage:")
@@ -187,6 +241,7 @@ def main():
         if results:
             analyzer.print_results()
             analyzer.save_json()
+            analyzer.save_summary()
         else:
             print("❌ Analysis failed")
 

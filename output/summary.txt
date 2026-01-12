@@ -1,0 +1,45 @@
+============================================================
+CODE ANALYSIS SUMMARY: complex_example.py
+============================================================
+
+📋 OVERVIEW:
+   Total Lines: 77
+   Functions: 10
+   Classes: 2
+   Imports: 5
+
+🔧 FUNCTION DETAILS:
+   • validate_order_data() at line 68
+     Parameters: data
+   • export_orders_to_json() at line 74
+     Parameters: orders, filename
+   • __init__() at line 14
+     Parameters: self, order_id, customer_id
+   • add_item() at line 20
+     Parameters: self, item_id, quantity, price
+   • calculate_total() at line 29
+     Parameters: self
+   • to_dict() at line 34
+     Parameters: self
+   • __init__() at line 48
+     Parameters: self
+   • create_order() at line 51
+     Parameters: self, customer_id
+   • get_order() at line 58
+     Parameters: self, order_id
+   • get_customer_orders() at line 62
+     Parameters: self, customer_id
+
+🏛️ CLASS DETAILS:
+   • Order at line 11
+     Methods: 4 - __init__, add_item, calculate_total, to_dict
+   • OrderManager at line 45
+     Methods: 4 - __init__, create_order, get_order, get_customer_orders
+
+📦 DEPENDENCIES:
+   • datetime
+   • json
+   • logging
+   • typing
+
+============================================================
